@@ -33,32 +33,20 @@ export const Projects = () => {
       <h5>My Recent Work</h5>
       <h2>Projects</h2>
       <div className="container portfolio__container">
-        <article className='portfolio__item'>
-          <div className="portfolio__item-image">
-            <img src={pearlsCollections} alt="" />
-          </div>
-          <h3>Pearls Collections Online Store</h3>
-          <a href="https://github.com/Buyaki01/nextjs13-online-store-shop" className='btn' target='_blank'>Github</a>
-          <a href="https://pearls-thamani-collections.vercel.app" className='btn btn-primary' target='_blank'>Live Demo</a>
-        </article>
-        <article className='portfolio__item'>
-          <div className="portfolio__item-image">
-            <img src={airbnb} alt="" />
-          </div>
-          <h3>Airbnb</h3>
-          <a href="https://github.com/Buyaki01/react-redux-airbnb-client" className='btn' target='_blank'>Github</a>
-          <a href="https://react-redux-airbnb-client.onrender.com" className='btn btn-primary' target='_blank'>Live Demo</a>
-        </article>
-        <article className='portfolio__item'>
-          <div className="portfolio__item-image">
-            <img src={swimmingBlog} alt="" />
-          </div>
-          <h3>Swimming Blog</h3>
-          <div className='portfolio__item-cta'>
-            <a href="https://github.com/Buyaki01/swimming-blog-nextjs" className='btn' target='_blank'>Github</a>
-            <a href="https://swimming-blog-nextjs.vercel.app" className='btn btn-primary' target='_blank'>Live Demo</a>
-          </div>
-        </article>
+        {
+          data.map(({ id, image, title, github, demo}) => {
+            return (
+              <article key={id} className='portfolio__item'>
+                <div className="portfolio__item-image">
+                  <img src={image} alt={title} />
+                </div>
+                <h3>{title}</h3>
+                <a href={github} className='btn' target='_blank'>Github</a>
+                <a href={demo} className='btn btn-primary' target='_blank'>Live Demo</a>
+              </article>
+            )
+          })
+        }
       </div>
     </section>
   )
