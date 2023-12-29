@@ -7,7 +7,7 @@ const data = [
   {
     id: 1,
     image: pearlsCollections,
-    title: 'Pearls Collections Online Store',
+    title: 'Pearls Collections Shop',
     github: 'https://github.com/Buyaki01/nextjs13-online-store-shop',
     demo: 'https://pearls-thamani-collections.vercel.app'
   },
@@ -40,9 +40,11 @@ export const Projects = () => {
                 <div className="portfolio__item-image">
                   <img src={image} alt={title} />
                 </div>
-                <h3>{title}</h3>
-                <a href={github} className='btn' target='_blank'>Github</a>
-                <a href={demo} className='btn btn-primary' target='_blank'>Live Demo</a>
+                <h3 className='whitespace-nowrap'>{title}</h3>
+                <div className='portfolio__item-cta'>
+                  <a href={github} className='btn' target='_blank'>Github</a>
+                  <a href={demo} className='btn btn-primary' target='_blank'>Live Demo</a>  
+                </div>
               </article>
             )
           })
