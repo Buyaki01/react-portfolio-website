@@ -74,14 +74,20 @@ export const Skills = () => {
   return (
     <section id="skills">
       <h2>Skills</h2>
-      <Slider {...settings} className="container skills__container">
+      <Slider {...settings} className="container skills__container border">
         {data.map(({image, name}, index) => {
           return (
-            <article key={index} className="skill flex gap-2">
-              <div className="logo__skill">
-                <img src={image} alt={name} />
+            <article key={index} className="rounded">
+              <div className="flex justify-center p-3">
+                <img 
+                  src={image} 
+                  alt={name}
+                  className="object-cover w-12 h-12"
+                />
               </div>
-              <h5 className='skill__name'>{name}</h5>
+              <div className="mt-3 text-center">
+                <h5 className='skill__name whitespace-nowrap'>{name}</h5>
+              </div>
             </article>
           )
         })}
