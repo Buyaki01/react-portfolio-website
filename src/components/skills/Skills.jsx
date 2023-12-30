@@ -53,6 +53,8 @@ export const Skills = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1024, // Medium devices (tablets)
@@ -77,15 +79,15 @@ export const Skills = () => {
       <Slider {...settings} className="container skills__container border">
         {data.map(({image, name}, index) => {
           return (
-            <article key={index} className="rounded">
-              <div className="flex justify-center p-3">
+            <article key={index} className="flex">
+              <div className="flex justify-center p-3 rounded-lg border border-2 border-solid skill__image">
                 <img 
                   src={image} 
                   alt={name}
                   className="object-cover w-12 h-12"
                 />
               </div>
-              <div className="mt-3 text-center">
+              <div className="mt-3 text-center w-full">
                 <h5 className='skill__name whitespace-nowrap'>{name}</h5>
               </div>
             </article>
