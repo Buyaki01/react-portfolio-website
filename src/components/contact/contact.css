@@ -59,10 +59,18 @@ input, textarea {
 
 /* MEDIA QUERIES (MEDIUM DEVICES) */
 @media screen and (max-width: 1024px) {
-  
+  .container.contact__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    /* work on the margin top, on medium screen contact is overlapping with projects section */
+  }
 }
 
 /* MEDIA QUERIES (SMALL DEVICES) */
 @media screen and (max-width: 600px) {
-  
+  .container.contact__container {
+    grid-template-columns: 1fr;
+    width: var(--container-width-sm);
+    /* work on the margin top, on small screen contact is overlapping with projects section */
+  }
 }
