@@ -49,7 +49,7 @@ form {
 
 input, textarea {
   width: 100%;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 0.5rem;
   background: transparent;
   border: 2px solid var(--color-primary-variant);
@@ -59,18 +59,23 @@ input, textarea {
 
 /* MEDIA QUERIES (MEDIUM DEVICES) */
 @media screen and (max-width: 1024px) {
+  #contact {
+    height: 150vh;
+  }
+
   .container.contact__container {
     grid-template-columns: 1fr;
     gap: 2rem;
-    /* work on the margin top, on medium screen contact is overlapping with projects section */
   }
 }
 
 /* MEDIA QUERIES (SMALL DEVICES) */
 @media screen and (max-width: 600px) {
+  #contact {
+    height: 200vh;
+  }
   .container.contact__container {
     grid-template-columns: 1fr;
     width: var(--container-width-sm);
-    /* work on the margin top, on small screen contact is overlapping with projects section */
   }
 }
