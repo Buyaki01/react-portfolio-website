@@ -2,8 +2,26 @@ import './contact.css'
 import { MdOutlineEmail } from "react-icons/md"
 import { RiMessengerLine } from "react-icons/ri"
 import { FaWhatsapp } from "react-icons/fa"
+import React, { useRef } from 'react'
+import emailjs from '@emailjs/browser'
 
 export const Contact = () => {
+  const form = useRef()
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs.sendForm('service_u15ofou', 'template_q55cekq', form.current, 'ZWHBpRwtBUXVm9Mgy')
+      .then((result) => {
+          console.log(result.text)
+      }, (error) => {
+        console.log(error.text)
+      }
+    )
+
+    e.target.reset()
+  }
+
   return (
     <section id='contact'>
       <h5>Get In Touch</h5>
@@ -36,7 +54,7 @@ export const Contact = () => {
             <a href="https://api.whatsapp.com/send?phone=%2B254722554294" target='_blank'>Send a message</a>
           </article>
         </div>
-        <form action="">
+        <form ref={form} onSubmit={sendEmail}>
           <input 
             type="text"
             name='name'
@@ -49,9 +67,15 @@ export const Contact = () => {
             placeholder='Your Email'
             required
           />
+          <input 
+            type="text"
+            name='subject'
+            placeholder='Email Subject'
+            required
+          />
           <textarea 
             name="message" 
-            rows="10"
+            rows="7"
             placeholder='Your Message'
             required
           >
