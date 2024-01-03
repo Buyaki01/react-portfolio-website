@@ -1,5 +1,17 @@
 #react-portfolio-website
 
+Welcome to the repository of my personal portfolio website! This responsive and sleek portfolio is built using React for the frontend, Tailwind CSS for styling, and EmailJS for seamless communication.
+
+## Live Demo
+Explore the live demo of the portfolio: [Live Demo](https://react-portfolio-website-djzj.onrender.com/) 
+
+## Features
+- **Modern Design**: Showcases projects and skills with a clean and modern user interface.
+- **Responsive Layout**: Has a seamless experience across various devices and screen sizes.
+- **Project Showcase**: Highlights my best work with dedicated project sections.
+- **Contact Form**: Integrated with EmailJS for easy communication and to receive messages directly in my inbox.
+- **Skills Section**: Displays skills and technologies that I am proficient in.
+
 ## Technologies Used
 - **React**
 - **Tailwind**
