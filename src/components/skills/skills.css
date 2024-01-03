@@ -35,5 +35,9 @@
   .container.skills__container {
     width: var(--container-width-sm);
   }
+
+  .slick-prev, .slick-next {
+    margin: 0 10px;
+  }
 }
 
