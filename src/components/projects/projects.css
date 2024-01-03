@@ -1,3 +1,7 @@
+#projects {
+  margin-top: 6rem;
+}
+
 .portfolio__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -42,10 +46,6 @@
 
 /* MEDIA QUERIES (SMALL DEVICES) */
 @media screen and (max-width: 600px) {
-  #projects {
-    height: 240vh;
-  }
-
   .portfolio__container {
     grid-template-columns: 1fr;
     gap: 1rem;
