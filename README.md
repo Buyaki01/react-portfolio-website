@@ -3,7 +3,7 @@
 Welcome to the repository of my personal portfolio website! This responsive and sleek portfolio is built using React for the frontend, Tailwind CSS for styling, and EmailJS for seamless communication.
 
 ## Live Demo
-Explore the live demo of the portfolio: [Live Demo](https://react-portfolio-website-djzj.onrender.com/) 
+Explore the live demo of the portfolio: [Live Demo](https://react-portfolio-website-djzj.onrender.com) 
 
 ## Features
 - **Modern Design**: Showcases projects and skills with a clean and modern user interface.
@@ -45,7 +45,7 @@ To get started with this app, follow these steps:
 ## Author
 👤 **Ritta Sweta**
 
-- Linkedin: [@ritta-sweta](https://www.linkedin.com/in/ritta-sweta/)
+- Linkedin: [@ritta-sweta](https://www.linkedin.com/in/ritta-sweta)
 - Github: [@Buyaki01](https://github.com/Buyaki01)
 
 ## 🤝 Contributing

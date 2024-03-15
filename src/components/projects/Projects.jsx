@@ -8,22 +8,25 @@ const data = [
     id: 1,
     image: pearlsCollections,
     title: 'Pearls Collections Shop',
-    github: 'https://github.com/Buyaki01/nextjs13-online-store-shop',
-    demo: 'https://pearls-thamani-collections.vercel.app'
+    github: 'https://github.com/Buyaki01/nextjs-online-store-shop',
+    demo: 'https://pearls-thamani-collections.vercel.app',
+    isPrivate: true,
   },
   {
     id: 2,
     image: airbnb,
     title: 'Airbnb',
     github: 'https://github.com/Buyaki01/react-redux-airbnb-client',
-    demo: 'https://react-redux-airbnb-client.onrender.com'
+    demo: 'https://react-redux-airbnb-client.onrender.com',
+    isPrivate: false,
   },
   {
     id: 3,
     image: swimmingBlog,
     title: 'Swimming Blog',
     github: 'https://github.com/Buyaki01/swimming-blog-nextjs',
-    demo: 'https://swimming-blog-nextjs.vercel.app'
+    demo: 'https://swimming-blog-nextjs.vercel.app',
+    isPrivate: false,
   },
 ]
 
@@ -34,7 +37,7 @@ export const Projects = () => {
       <h2>Projects</h2>
       <div className="container portfolio__container">
         {
-          data.map(({ id, image, title, github, demo}) => {
+          data.map(({ id, image, title, github, demo, isPrivate}) => {
             return (
               <article key={id} className='portfolio__item'>
                 <div className="portfolio__item-image">
@@ -42,8 +45,14 @@ export const Projects = () => {
                 </div>
                 <h3 className='whitespace-nowrap'>{title}</h3>
                 <div className='portfolio__item-cta'>
-                  <a href={github} className='btn' target='_blank'>Github</a>
-                  <a href={demo} className='btn btn-primary' target='_blank'>Live Demo</a>  
+                  {!isPrivate && (
+                    <a href={github} className='btn' target='_blank'>
+                      GitHub
+                    </a>
+                  )}
+                  <a href={demo} className='btn btn-primary' target='_blank'>
+                    Live Demo
+                  </a>
                 </div>
               </article>
             )
