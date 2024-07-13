@@ -18,7 +18,7 @@ const data = [
     title: 'Airbnb',
     github: 'https://github.com/Buyaki01/react-redux-airbnb-client',
     demo: 'https://react-redux-airbnb-client.onrender.com',
-    isPrivate: false,
+    isPrivate: true,
   },
   {
     id: 3,
