@@ -1,50 +1,55 @@
-import Slider from "react-slick"
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css"
-import './skills.css'
-import tailwindCssLogo from '../../assets/Tailwind-CSS.png'
-import mongodbLogo from '../../assets/mongodbLogo.png'
-import nextjslogo from '../../assets/nextjslogo.png'
-import reactLogo from '../../assets/reactLogo.png'
-import nodejsLogo from '../../assets/nodejs-logo.png'
-import expressLogo from '../../assets/expressLogo.png'
-import postgresql from '../../assets/postgresql.png'
-import javascriptLogo from '../../assets/javascriptlogo.png'
+import "slick-carousel/slick/slick-theme.css";
+import "./skills.css";
+import tailwindCssLogo from "../../assets/Tailwind-CSS.png";
+import mongodbLogo from "../../assets/mongodbLogo.png";
+import nextjslogo from "../../assets/nextjslogo.png";
+import reactLogo from "../../assets/reactLogo.png";
+import nodejsLogo from "../../assets/nodejs-logo.png";
+import expressLogo from "../../assets/expressLogo.png";
+import postgresql from "../../assets/postgresql.png";
+import javascriptLogo from "../../assets/javascriptlogo.png";
+import angularjsLogo from "../../assets/angularjs.jpg";
 
 const data = [
   {
-    image: reactLogo,
-    name: 'React'
-  }, 
-  {
     image: nextjslogo,
-    name: 'NextJs'
-  }, 
+    name: "NextJs",
+  },
+  {
+    image: reactLogo,
+    name: "React",
+  },
   {
     image: javascriptLogo,
-    name: 'JavaScript'
+    name: "JavaScript",
   },
   {
     image: nodejsLogo,
-    name: 'NodeJs'
-  }, 
+    name: "NodeJs",
+  },
+  {
+    image: angularjsLogo,
+    name: "Angular",
+  },
   {
     image: expressLogo,
-    name: 'ExpressJs'
-  }, 
+    name: "ExpressJs",
+  },
   {
     image: tailwindCssLogo,
-    name: 'TailwindCss'
-  }, 
+    name: "TailwindCss",
+  },
   {
     image: mongodbLogo,
-    name: 'mongoDB'
-  }, 
+    name: "mongoDB",
+  },
   {
     image: postgresql,
-    name: 'postgresql'
-  }, 
-]
+    name: "postgresql",
+  },
+];
 
 export const Skills = () => {
   const settings = {
@@ -71,29 +76,29 @@ export const Skills = () => {
         },
       },
     ],
-  }
+  };
 
   return (
     <section id="skills">
       <h2>Skills</h2>
       <Slider {...settings} className="container skills__container border">
-        {data.map(({image, name}, index) => {
+        {data.map(({ image, name }, index) => {
           return (
             <article key={index} className="flex">
               <div className="flex justify-center p-3 rounded-lg border border-2 border-solid skill__image">
-                <img 
-                  src={image} 
+                <img
+                  src={image}
                   alt={name}
                   className="object-cover w-12 h-12"
                 />
               </div>
               <div className="mt-3 text-center w-full">
-                <h5 className='skill__name whitespace-nowrap'>{name}</h5>
+                <h5 className="skill__name whitespace-nowrap">{name}</h5>
               </div>
             </article>
-          )
+          );
         })}
       </Slider>
     </section>
-  )
-}
+  );
+};
