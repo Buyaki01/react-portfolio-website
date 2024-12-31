@@ -1,7 +1,6 @@
 import "./projects.css";
 import pearlsCollections from "../../assets/pearlsCollections.PNG";
 import airbnb from "../../assets/airbnb.PNG";
-import swimmingBlog from "../../assets/swimmingBlog.PNG";
 import pearlsThamaniCare from "../../assets/pearlsThamaniCare.png";
 
 const data = [
@@ -28,14 +27,6 @@ const data = [
     github: "https://github.com/Buyaki01/pearls-thamani-care",
     demo: "https://pearls-thamani-care.vercel.app/home",
     isPrivate: true,
-  },
-  {
-    id: 4,
-    image: swimmingBlog,
-    title: "Swimming Blog",
-    github: "https://github.com/Buyaki01/swimming-blog-nextjs",
-    demo: "https://swimming-blog-nextjs.vercel.app",
-    isPrivate: false,
   },
 ];
 
