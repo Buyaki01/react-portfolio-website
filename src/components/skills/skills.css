@@ -1,6 +1,6 @@
 #skills {
   margin-top: 6rem;
-  height: 30vh;
+  min-height: 35vh;
 }
 
 .container.skills__container {
@@ -16,6 +16,12 @@
 
 .skill__image {
   border: 0.4rem solid var(--color-primary-variant);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill__image:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 12px rgba(77, 181, 255, 0.4);
 }
 
 .slick-prev, .slick-next {

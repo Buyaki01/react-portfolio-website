@@ -1,76 +1,61 @@
-import airbnb from "../../assets/airbnb.PNG";
-import pearlsCollections from "../../assets/pearlsCollections.PNG";
-import pearlsThamaniCare from "../../assets/pearlsThamaniCare.png";
-import carRental from "../../assets/thamani-cars.png";
-import "./projects.css";
+import airbnb from '../../assets/airbnb.PNG';
+import pearlsCollections from '../../assets/pearlsCollections.PNG';
+import pearlsThamaniCare from '../../assets/pearlsThamaniCare.png';
+import carRental from '../../assets/thamani-cars.png';
+import './projects.css';
 
 const data = [
     {
         id: 1,
-        image: airbnb,
-        title: "Airbnb",
-        github: "https://github.com/Buyaki01/react-redux-airbnb-client",
-        demo: "https://react-redux-airbnb-client.onrender.com",
+        image: carRental,
+        title: 'Car Rental',
+        github: 'https://github.com/Buyaki01/carrental-mern',
+        demo: 'https://thamani-cars.vercel.app',
         isPrivate: true,
         languages: [
-            "React",
-            "Redux Toolkit",
-            "Node.js",
-            "Express",
-            "MongoDB",
-            "Stripe Payment",
-            "TailwindCSS",
+            'React',
+            'Redux Toolkit',
+            'React Query',
+            'Node.js',
+            'Express',
+            'MongoDB',
+            'Stripe - for payment',
+            'Cloudinary',
+            'TailwindCSS',
         ],
     },
     {
         id: 2,
-        image: pearlsCollections,
-        title: "Pearls Collections Shop",
-        github: "https://github.com/Buyaki01/nextjs-online-store-shop",
-        demo: "https://pearls-thamani-collections.vercel.app",
+        image: airbnb,
+        title: 'Airbnb',
+        github: 'https://github.com/Buyaki01/react-redux-airbnb-client',
+        demo: 'https://react-redux-airbnb-client.onrender.com',
         isPrivate: true,
         languages: [
-            "Next.js",
-            "React.js",
-            "JavaScript",
-            "MongoDB",
-            "Stripe",
-            "NextAuth",
-            "React",
+            'React',
+            'Redux Toolkit',
+            'Node.js',
+            'Express',
+            'MongoDB',
+            'Stripe Payment',
+            'TailwindCSS',
         ],
     },
     {
         id: 3,
-        image: carRental,
-        title: "Car Rental",
-        github: "https://github.com/Buyaki01/carrental-mern",
-        demo: "https://thamani-cars.vercel.app",
+        image: pearlsCollections,
+        title: 'Pearls Collections Shop',
+        github: 'https://github.com/Buyaki01/nextjs-online-store-shop',
+        demo: 'https://pearls-thamani-collections.vercel.app',
         isPrivate: true,
         languages: [
-            "React",
-            "Redux Toolkit",
-            "React Query",
-            "Node.js",
-            "Express",
-            "MongoDB",
-            "TailwindCSS",
-        ],
-    },
-    {
-        id: 4,
-        image: pearlsThamaniCare,
-        title: "Pearls Thamani Care",
-        github: "https://github.com/Buyaki01/pearls-thamani-care",
-        demo: "https://pearls-thamani-care.vercel.app/home",
-        isPrivate: true,
-        languages: [
-            "Next.js",
-            "React.js",
-            "JavaScript",
-            "MongoDB",
-            "NextAuth",
-            "Tailwind CSS",
-            "Material UI",
+            'Next.js',
+            'React.js',
+            'JavaScript',
+            'MongoDB',
+            'Stripe',
+            'NextAuth',
+            'Cloudinary',
         ],
     },
 ];
@@ -140,7 +125,7 @@ export const Projects = () => {
                                 </a>
                             </div>
                         </article>
-                    )
+                    ),
                 )}
             </div>
         </section>

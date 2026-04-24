@@ -40,7 +40,7 @@
   font-size: 0.8rem;
 }
 
-h5 { 
+#contact h5 {
   color: var(--color-light);
 }
 
@@ -59,6 +59,13 @@ input, textarea {
   border: 2px solid var(--color-primary-variant);
   resize: none;
   color: var(--color-white);
+  transition: border-color 300ms ease, box-shadow 300ms ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 8px rgba(77, 181, 255, 0.3);
 }
 
 /* MEDIA QUERIES (MEDIUM DEVICES) */

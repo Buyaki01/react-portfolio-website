@@ -68,20 +68,13 @@
     gap: 1rem;
 }
 
-.btn {
+#projects .btn {
     padding: 0.5rem 1.2rem;
     border-radius: 5px;
     font-size: 0.9rem;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-    background: var(--color-primary);
-    color: var(--color-white);
-    transition: background 0.3s ease;
-}
-
-.btn:hover {
-    background: var(--color-primary-variant);
 }
 
 .btn-disabled {
@@ -95,11 +88,17 @@
 }
 
 .btn-primary {
-    background: var(--color-accent);
+    background: var(--color-primary);
+    color: var(--color-bg);
+    border-color: transparent;
 }
 
 .btn-primary:hover {
-    background: var(--color-accent-variant);
+    background: var(--color-primary);
+    color: var(--color-bg);
+    transform: translateY(-3px);
+    box-shadow: 0 0 18px rgba(77, 181, 255, 0.55);
+    border-color: transparent;
 }
 
 .portfolio__languages {
@@ -133,7 +132,7 @@
         font-size: 1.2rem;
     }
 
-    .btn {
+    #projects .btn {
         font-size: 0.8rem;
         padding: 0.4rem 1rem;
     }
