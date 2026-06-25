@@ -1,6 +1,3 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import "./skills.css";
 import tailwindCssLogo from "../../assets/Tailwind-CSS.png";
 import mongodbLogo from "../../assets/mongodbLogo.png";
@@ -52,53 +49,21 @@ const data = [
 ];
 
 export const Skills = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    responsive: [
-      {
-        breakpoint: 1024, // Medium devices (tablets)
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768, // Small devices (phones)
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
   return (
     <section id="skills">
+      <h5>What I Work With</h5>
       <h2>Skills</h2>
-      <Slider {...settings} className="container skills__container border">
-        {data.map(({ image, name }, index) => {
-          return (
-            <article key={index} className="flex">
-              <div className="flex justify-center p-3 rounded-lg border border-2 border-solid skill__image">
-                <img
-                  src={image}
-                  alt={name}
-                  className="object-cover w-12 h-12"
-                />
-              </div>
-              <div className="mt-3 text-center w-full">
-                <h5 className="skill__name whitespace-nowrap">{name}</h5>
-              </div>
-            </article>
-          );
-        })}
-      </Slider>
+
+      <div className="container skills__container">
+        {data.map(({ image, name }, index) => (
+          <article key={index} className="skill__card">
+            <div className="skill__image">
+              <img src={image} alt={name} className="object-cover w-12 h-12" />
+            </div>
+            <h5 className="skill__name whitespace-nowrap">{name}</h5>
+          </article>
+        ))}
+      </div>
     </section>
   );
 };

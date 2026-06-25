@@ -56,10 +56,36 @@
 .portfolio__item h3 {
     font-size: 1.5rem;
     color: var(--color-white);
-    margin: 1.5rem 0;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+    margin: 1.2rem 0 0.6rem;
+}
+
+.portfolio__item-description {
+    color: var(--color-light);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.portfolio__highlights {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.portfolio__highlights li {
+    color: var(--color-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding-left: 1.4rem;
+    position: relative;
+}
+
+.portfolio__highlights li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
 }
 
 .portfolio__item-cta {
@@ -85,6 +111,67 @@
     color: var(--color-light);
     cursor: not-allowed;
     text-transform: uppercase;
+}
+
+/* Private-repo indicator with hover tooltip */
+.portfolio__private {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: help;
+}
+
+.portfolio__private[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 135%;
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    width: max-content;
+    max-width: 220px;
+    padding: 0.5rem 0.75rem;
+    background: var(--color-bg);
+    color: var(--color-light);
+    border: 1px solid var(--color-primary-variant);
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.4;
+    text-transform: none;
+    white-space: normal;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 3;
+}
+
+.portfolio__private[data-tooltip]::before {
+    content: '';
+    position: absolute;
+    bottom: 135%;
+    left: 50%;
+    transform: translateX(-50%) translateY(7px);
+    border: 6px solid transparent;
+    border-top-color: var(--color-primary-variant);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 3;
+}
+
+.portfolio__private:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.portfolio__private:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
 }
 
 .btn-primary {

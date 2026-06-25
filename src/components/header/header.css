@@ -1,6 +1,7 @@
 header {
-    height: 120vh;
+    min-height: 100vh;
     padding-top: 3rem;
+    padding-bottom: 3rem;
     overflow: hidden;
 }
 
@@ -30,7 +31,7 @@ header {
 }
 
 .header__socials::after {
-    content: "";
+    content: '';
     width: 1px;
     height: 2rem;
     background: var(--color-primary);
@@ -40,7 +41,6 @@ header {
 .me {
     background: linear-gradient(var(--color-primary), transparent);
     width: 22rem;
-    height: 30rem;
     margin: 4rem auto 0;
     border-radius: 12rem 12rem 0 0;
     overflow: hidden;
@@ -53,8 +53,34 @@ header {
     right: -2.3rem;
     bottom: 11rem;
     transform: rotate(90deg);
+    transform-origin: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
     font-weight: 300;
     font-size: 0.9rem;
+    color: var(--color-light);
+    transition: var(--transition);
+}
+
+.scroll__down:hover {
+    color: var(--color-primary);
+}
+
+.scroll__down-icon {
+    /* Counter-rotate so the chevron points downward despite the rotated link */
+    transform: rotate(-90deg);
+    animation: scrollNudge 1.6s ease-in-out infinite;
+}
+
+@keyframes scrollNudge {
+    0%,
+    100% {
+        transform: rotate(-90deg) translateX(0);
+    }
+    50% {
+        transform: rotate(-90deg) translateX(0.35rem);
+    }
 }
 
 /* MEDIA QUERIES (SMALL DEVICES) */

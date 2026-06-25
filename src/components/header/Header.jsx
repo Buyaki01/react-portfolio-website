@@ -1,11 +1,12 @@
-import Me from "../../assets/me.png";
-import { HeaderButtons } from "./HeaderButtons";
-import { HeaderSocials } from "./HeaderSocials";
-import "./header.css";
+import Me from '../../assets/me.jpg';
+import { HeaderButtons } from './HeaderButtons';
+import { HeaderSocials } from './HeaderSocials';
+import { BsChevronDoubleDown } from "react-icons/bs";
+import './header.css';
 
 export const Header = () => {
     return (
-        <header>
+        <header id="home">
             <div className="container header__container">
                 <h5>Hello I'm</h5>
                 <h1>Ritta Sweta</h1>
@@ -17,11 +18,12 @@ export const Header = () => {
                 <HeaderButtons />
                 <HeaderSocials />
                 <div className="me">
-                    <img src={Me} alt="Professional Photo" />
+                    <img src={Me} alt="Ritta Sweta" />
                 </div>
 
-                <a href="#contact" className="scroll__down">
+                <a href="#skills" className="scroll__down">
                     Scroll Down
+                    <BsChevronDoubleDown className="scroll__down-icon" />
                 </a>
             </div>
         </header>

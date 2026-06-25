@@ -1,6 +1,6 @@
-import airbnb from '../../assets/airbnb.PNG';
+import { BsLockFill } from 'react-icons/bs';
+import airbnb from '../../assets/airbnb.png';
 import pearlsCollections from '../../assets/pearlsCollections.PNG';
-import pearlsThamaniCare from '../../assets/pearlsThamaniCare.png';
 import carRental from '../../assets/thamani-cars.png';
 import './projects.css';
 
@@ -8,7 +8,14 @@ const data = [
     {
         id: 1,
         image: carRental,
-        title: 'Car Rental',
+        title: 'Thamani Cars',
+        description:
+            'A car-rental marketplace where users browse vehicles, book by date, and pay securely online with live availability and host image management.',
+        highlights: [
+            'Secure Stripe payments',
+            'Cloudinary image uploads',
+            'React Query server-state caching',
+        ],
         github: 'https://github.com/Buyaki01/carrental-mern',
         demo: 'https://thamani-cars.vercel.app',
         isPrivate: true,
@@ -16,47 +23,48 @@ const data = [
             'React',
             'Redux Toolkit',
             'React Query',
-            'Node.js',
-            'Express',
+            'Node.js / Express',
             'MongoDB',
-            'Stripe - for payment',
-            'Cloudinary',
-            'TailwindCSS',
+            'Stripe',
         ],
     },
     {
         id: 2,
         image: airbnb,
-        title: 'Airbnb',
+        title: 'Thamani Stays',
+        description:
+            'A full-stack airbnb-booking platform where hosts list properties and guests search, book by date, and pay online.',
+        highlights: [
+            'Secure Stripe checkout',
+            'Date-based availability & booking',
+            'Authenticated host & guest accounts',
+        ],
         github: 'https://github.com/Buyaki01/react-redux-airbnb-client',
-        demo: 'https://react-redux-airbnb-client.onrender.com',
+        demo: 'https://thamani-stays.vercel.app',
         isPrivate: true,
         languages: [
             'React',
             'Redux Toolkit',
-            'Node.js',
-            'Express',
+            'Node.js / Express',
             'MongoDB',
-            'Stripe Payment',
-            'TailwindCSS',
+            'Stripe',
         ],
     },
     {
         id: 3,
         image: pearlsCollections,
-        title: 'Pearls Collections Shop',
+        title: 'Pearls Collections',
+        description:
+            'An e-commerce store with a product catalog, cart, authenticated user accounts, and secure checkout, built on Next.js.',
+        highlights: [
+            'Stripe checkout',
+            'NextAuth sessions',
+            'Cloudinary media management',
+        ],
         github: 'https://github.com/Buyaki01/nextjs-online-store-shop',
         demo: 'https://pearls-thamani-collections.vercel.app',
         isPrivate: true,
-        languages: [
-            'Next.js',
-            'React.js',
-            'JavaScript',
-            'MongoDB',
-            'Stripe',
-            'NextAuth',
-            'Cloudinary',
-        ],
+        languages: ['Next.js', 'MongoDB', 'Stripe', 'NextAuth', 'Cloudinary'],
     },
 ];
 
@@ -71,6 +79,8 @@ export const Projects = () => {
                         id,
                         image,
                         title,
+                        description,
+                        highlights,
                         github,
                         demo,
                         isPrivate,
@@ -85,7 +95,18 @@ export const Projects = () => {
                             </div>
 
                             <div>
-                                <h3 className="whitespace-nowrap">{title}</h3>
+                                <h3>{title}</h3>
+
+                                <p className="portfolio__item-description">
+                                    {description}
+                                </p>
+
+                                {/* Key features */}
+                                <ul className="portfolio__highlights">
+                                    {highlights.map((point, index) => (
+                                        <li key={index}>{point}</li>
+                                    ))}
+                                </ul>
 
                                 {/* Technologies used */}
                                 <div className="portfolio__languages">
@@ -111,8 +132,12 @@ export const Projects = () => {
                                         GitHub
                                     </a>
                                 ) : (
-                                    <span className="btn-disabled">
-                                        Private Repository
+                                    <span
+                                        className="btn-disabled portfolio__private"
+                                        data-tooltip="Source code is private. This product is being prepared for commercialization"
+                                        aria-label="Private repository. Source code is being prepared for commercialization"
+                                    >
+                                        <BsLockFill /> Private Repo
                                     </span>
                                 )}
                                 <a
