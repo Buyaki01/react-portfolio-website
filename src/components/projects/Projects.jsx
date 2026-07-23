@@ -1,12 +1,60 @@
 import { BsLockFill } from 'react-icons/bs';
 import airbnb from '../../assets/airbnb.png';
-import pearlsCollections from '../../assets/pearlsCollections.PNG';
+import pearlsCollections from '../../assets/pearlsCollections.png';
+import pizzaBites from '../../assets/pizzaBites.png';
 import carRental from '../../assets/thamani-cars.png';
 import './projects.css';
 
 const data = [
     {
         id: 1,
+        image: pearlsCollections,
+        title: 'Pearls Collections',
+        description:
+            'An e-commerce store with a product catalog, cart, authenticated user accounts, and secure checkout, built on Next.js.',
+        highlights: [
+            'Stripe checkout',
+            'NextAuth sessions',
+            'Cloudinary media optimization',
+            'Sentry error monitoring',
+        ],
+        github: 'https://github.com/Buyaki01/nextjs-online-store-shop',
+        demo: 'https://pearls-thamani-collections.vercel.app',
+        isPrivate: true,
+        languages: [
+            'Next.js',
+            'MongoDB',
+            'Stripe',
+            'NextAuth',
+            'Cloudinary',
+            'Sentry',
+        ],
+    },
+    {
+        id: 2,
+        image: pizzaBites,
+        title: 'Pizza Bites',
+        description:
+            'A full-stack food-ordering platform where customers browse a categorized menu, build a cart, and pay online, backed by an admin dashboard for managing menu items, categories, orders, and users.',
+        highlights: [
+            'Stripe checkout with webhooks',
+            'Admin dashboard & role-based access',
+            'NextAuth v5 authentication',
+        ],
+        github: 'https://github.com/Buyaki01/nextjs-postgres-food-ordering-app',
+        demo: 'https://pizza-bites-gamma.vercel.app',
+        isPrivate: true,
+        languages: [
+            'Next.js',
+            'PostgreSQL',
+            'Drizzle ORM',
+            'Stripe',
+            'NextAuth',
+            'Cloudinary',
+        ],
+    },
+    {
+        id: 3,
         image: carRental,
         title: 'Thamani Cars',
         description:
@@ -29,7 +77,7 @@ const data = [
         ],
     },
     {
-        id: 2,
+        id: 4,
         image: airbnb,
         title: 'Thamani Stays',
         description:
@@ -49,22 +97,6 @@ const data = [
             'MongoDB',
             'Stripe',
         ],
-    },
-    {
-        id: 3,
-        image: pearlsCollections,
-        title: 'Pearls Collections',
-        description:
-            'An e-commerce store with a product catalog, cart, authenticated user accounts, and secure checkout, built on Next.js.',
-        highlights: [
-            'Stripe checkout',
-            'NextAuth sessions',
-            'Cloudinary media management',
-        ],
-        github: 'https://github.com/Buyaki01/nextjs-online-store-shop',
-        demo: 'https://pearls-thamani-collections.vercel.app',
-        isPrivate: true,
-        languages: ['Next.js', 'MongoDB', 'Stripe', 'NextAuth', 'Cloudinary'],
     },
 ];
 
